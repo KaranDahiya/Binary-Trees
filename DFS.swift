@@ -18,10 +18,10 @@
  
 class Solution {
     func preorderTraversal(_ root: TreeNode?) -> [Int] {
-        if root == nil { return [] }
+        guard let root = root else { return [] }
 
         var traversal = [Int]()
-        var queue = [root!]
+        var queue = [root]
 
         while !queue.isEmpty {
             let node = queue.removeFirst()
